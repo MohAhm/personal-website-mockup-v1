@@ -1,5 +1,18 @@
 @import "./normalize.css";
 
+:root {
+  /* Dark Theme */
+  --background-dark: #1d1f26;
+  --color-body-dark: #adafba;
+  --color-headings-dark: #fff;
+  --color-primary-dark: #7f42ff;
+  /* Light Theme */
+  --background-light: #faf8fd;
+  --color-body-light: #696969;
+  --color-headings-light: #25323d;
+  --color-primary-light: #222;
+}
+
 *,
 *::after,
 *::before {
@@ -10,42 +23,42 @@ img {
   width: 100%;
 }
 
-/* Theme Color Palette */
+/* Theme */
 
 body {
-  --background: #faf8fd;
-  --color-body: #696969;
-  --color-headings: #25323d;
-  --color-primary: #222;
+  --background: var(--background-light);
+  --color-body: var(--color-body-light);
+  --color-headings: var(--color-headings-light);
+  --color-primary: var(--color-primary-light);
 }
 
 body.dark-theme {
-  --background: #1d1f26;
-  --color-body: #adafba;
-  --color-headings: #fff;
-  --color-primary: #7f42ff;
+  --background: var(--background-dark);
+  --color-body: var(--color-body-dark);
+  --color-headings: var(--color-headings-dark);
+  --color-primary: var(--color-primary-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    --background: #1d1f26;
-    --color-body: #adafba;
-    --color-headings: #fff;
-    --color-primary: #7f42ff;
+    --background: var(--background-dark);
+    --color-body: var(--color-body-dark);
+    --color-headings: var(--color-headings-dark);
+    --color-primary: var(--color-primary-dark);
   }
 
   body.light-theme {
-    --background: #faf8fd;
-    --color-body: #696969;
-    --color-headings: #25323d;
-    --color-primary: #222;
+    --background: var(--background-light);
+    --color-body: var(--color-body-light);
+    --color-headings: var(--color-headings-light);
+    --color-primary: var(--color-primary-light);
   }
 }
 
 /* Typography */
 
 ::selection {
-  background: #7f42ff;
+  background: var(--color-primary-dark);
   color: #fff;
 }
 
