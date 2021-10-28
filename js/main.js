@@ -1,7 +1,7 @@
 const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-const currentTheme = localStorage.getItem("theme");
+const currentTheme = localStorage.getItem("theme1");
 if (currentTheme == "dark") {
   document.body.classList.toggle("dark-theme");
 } else if (currentTheme == "light") {
@@ -20,5 +20,5 @@ btn.addEventListener("click", function () {
       ? "dark"
       : "light";
   }
-  localStorage.setItem("theme", theme);
+  localStorage.setItem("theme1", theme);
 });

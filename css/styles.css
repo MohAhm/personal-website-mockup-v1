@@ -2,15 +2,43 @@
 
 :root {
   /* Dark Theme */
-  --background-dark: #1d1f26;
-  --color-body-dark: #adafba;
+  --color-block-main-dark: #1d1f26;
+  --color-block-contact-dark: #272c3a;
+  --color-block-footer-dark: #171920;
   --color-headings-dark: #fff;
+  --color-body-dark: #adafba;
   --color-primary-dark: #7f42ff;
+  --color-secondary-dark: linear-gradient(
+    265.5deg,
+    #bf3dff 1.85%,
+    #7f28ff 98.53%
+  );
+  --color-accent-dark: #413f6f;
+  --color-link-dark: #b393d7;
+  --color-icon-dark: #e5e5e5;
+  --color-open-dark: #66ffa7;
+  --color-open-bg-dark: rgba(227, 255, 209, 0.09);
+  --color-typescript-dark: rgba(244, 238, 251, 0.06);
+  --color-javascript-dark: rgba(255, 242, 197, 0.06);
+  --color-react-dark: rgba(235, 241, 255, 0.1);
+  --color-graphql-dark: rgba(255, 220, 243, 0.1);
   /* Light Theme */
-  --background-light: #faf8fd;
-  --color-body-light: #696969;
+  --color-block-main-light: #faf8fd;
+  --color-block-contact-light: #fff;
+  --color-block-footer-light: var(--color-block-contact-light);
   --color-headings-light: #25323d;
+  --color-body-light: #696969;
   --color-primary-light: #222;
+  --color-secondary-light: #e151ae;
+  --color-accent-light: var(--color-primary-light);
+  --color-link-light: var(--color-primary-light);
+  --color-icon-light: #385e78;
+  --color-open-light: #28a65a;
+  --color-open-bg-light: rgba(122, 195, 77, 0.17);
+  --color-typescript-light: #f4eefb;
+  --color-javascript-light: #fff2c5;
+  --color-react-light: #ebf1ff;
+  --color-graphql-light: #ffdcf3;
 }
 
 *,
@@ -26,32 +54,80 @@ img {
 /* Theme */
 
 body {
-  --background: var(--background-light);
+  --color-block-main: var(--color-block-main-light);
+  --color-block-contact: var(--color-block-contact-light);
+  --color-block-footer: var(--color-block-footer-light);
   --color-body: var(--color-body-light);
   --color-headings: var(--color-headings-light);
   --color-primary: var(--color-primary-light);
+  --color-secondary: var(--color-secondary-light);
+  --color-accent-light: var(--color-accent-light);
+  --color-link: var(--color-link-light);
+  --color-icon: var(--color-icon-light);
+  --color-open: var(--color-open-light);
+  --color-open-bg: var(--color-open-bg-light);
+  --color-typescript: var(--color-typescript-light);
+  --color-javascript: var(--color-javascript-light);
+  --color-react: var(--color-react-light);
+  --color-graphql: var(--color-graphql-light);
 }
 
 body.dark-theme {
-  --background: var(--background-dark);
+  --color-block-main: var(--color-block-main-dark);
+  --color-block-contact: var(--color-block-contact-dark);
+  --color-block-footer: var(--color-block-footer-dark);
   --color-body: var(--color-body-dark);
   --color-headings: var(--color-headings-dark);
   --color-primary: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-accent-dark: var(--color-accent-dark);
+  --color-link: var(--color-link-dark);
+  --color-icon: var(--color-icon-dark);
+  --color-open: var(--color-open-dark);
+  --color-open-bg: var(--color-open-bg-dark);
+  --color-typescript: var(--color-typescript-dark);
+  --color-javascript: var(--color-javascript-dark);
+  --color-react: var(--color-react-dark);
+  --color-graphql: var(--color-graphql-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    --background: var(--background-dark);
+    --color-block-main: var(--color-block-main-dark);
+    --color-block-contact: var(--color-block-contact-dark);
+    --color-block-footer: var(--color-block-footer-dark);
     --color-body: var(--color-body-dark);
     --color-headings: var(--color-headings-dark);
     --color-primary: var(--color-primary-dark);
+    --color-secondary: var(--color-secondary-dark);
+    --color-accent-dark: var(--color-accent-dark);
+    --color-link: var(--color-link-dark);
+    --color-icon: var(--color-icon-dark);
+    --color-open: var(--color-open-dark);
+    --color-open-bg: var(--color-open-bg-dark);
+    --color-typescript: var(--color-typescript-dark);
+    --color-javascript: var(--color-javascript-dark);
+    --color-react: var(--color-react-dark);
+    --color-graphql: var(--color-graphql-dark);
   }
 
   body.light-theme {
-    --background: var(--background-light);
+    --color-block-main: var(--color-block-main-light);
+    --color-block-contact: var(--color-block-contact-light);
+    --color-block-footer: var(--color-block-footer-light);
     --color-body: var(--color-body-light);
     --color-headings: var(--color-headings-light);
     --color-primary: var(--color-primary-light);
+    --color-secondary: var(--color-secondary-light);
+    --color-accent-light: var(--color-accent-light);
+    --color-link: var(--color-link-light);
+    --color-icon: var(--color-icon-light);
+    --color-open: var(--color-open-light);
+    --color-open-bg: var(--color-open-bg-light);
+    --color-typescript: var(--color-typescript-light);
+    --color-javascript: var(--color-javascript-light);
+    --color-react: var(--color-react-light);
+    --color-graphql: var(--color-graphql-light);
   }
 }
 
@@ -67,13 +143,14 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--color-body);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 1.5;
+  color: var(--color-body);
+
+  background: var(--color-block-main); /* temp... */
 }
 
 h1,
@@ -102,10 +179,88 @@ p {
 
 @media screen and (min-width: 1024px) {
   body {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   h3 {
     font-size: 2.4rem;
   }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  color: var(--color-link);
+  font-weight: 500;
+}
+
+.link .icon {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.link:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  position: relative;
+  bottom: 0.3rem;
+  background-color: var(--color-link);
+  transition: width 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.link:hover:after {
+  width: 100%;
+}
+
+/* Icons */
+
+.icon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.icon--primary {
+  fill: var(--color-icon);
+}
+
+.icon--secondary {
+  fill: var(--color-link);
+}
+
+.icon--skills {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.icon-container {
+  width: 10.5rem;
+  height: 10.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4.3rem;
+}
+
+.icon-container--typescript {
+  background: var(--color-typescript);
+}
+
+.icon-container--javascript {
+  background: var(--color-javascript);
+}
+
+.icon-container--react {
+  background: var(--color-react);
+}
+
+.icon-container--graphql {
+  background: var(--color-graphql);
 }
