@@ -264,3 +264,43 @@ a {
 .icon-container--graphql {
   background: var(--color-graphql);
 }
+
+/* Badge */
+
+.badge {
+  border-radius: 10.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.5;
+  padding: 0.9rem 1.6rem;
+  white-space: nowrap;
+}
+
+.badge--title {
+  background: var(--color-secondary);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(250, 118, 96, 0.2);
+}
+
+.badge--open-to-work {
+  background: var(--color-open);
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0;
+  height: 2.4rem;
+  overflow: hidden;
+  padding: 0;
+  width: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .badge--open-to-work {
+    background: var(--color-open-bg);
+    border-radius: 20rem;
+    color: var(--color-open);
+    display: inline;
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 0.7rem 1.5rem;
+  }
+}
