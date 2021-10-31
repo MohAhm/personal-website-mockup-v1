@@ -8,12 +8,7 @@
   --color-headings-dark: #fff;
   --color-body-dark: #adafba;
   --color-primary-dark: #7f42ff;
-  --color-secondary-dark: linear-gradient(
-    265.5deg,
-    #bf3dff 1.85%,
-    #7f28ff 98.53%
-  );
-  --color-accent-dark: #413f6f;
+  --color-secondary-dark: linear-gradient(30deg, #7f28ff 2%, #bf3dff 98%);
   --color-link-dark: #b393d7;
   --color-icon-dark: #e5e5e5;
   --color-open-dark: #66ffa7;
@@ -22,6 +17,14 @@
   --color-javascript-dark: rgba(255, 242, 197, 0.06);
   --color-react-dark: rgba(235, 241, 255, 0.1);
   --color-graphql-dark: rgba(255, 220, 243, 0.1);
+  --color-btn-hero-dark: linear-gradient(
+    30deg,
+    #7f28ff 2%,
+    #bf3dff 48%,
+    transparent 50%
+  );
+  --color-btn-contact-dark: #413f6f;
+  --color-btn-top-dark: var(--color-primary-dark);
   /* Light Theme */
   --color-block-main-light: #faf8fd;
   --color-block-contact-light: #fff;
@@ -30,7 +33,6 @@
   --color-body-light: #696969;
   --color-primary-light: #222;
   --color-secondary-light: #e151ae;
-  --color-accent-light: var(--color-primary-light);
   --color-link-light: var(--color-primary-light);
   --color-icon-light: #385e78;
   --color-open-light: #28a65a;
@@ -39,6 +41,12 @@
   --color-javascript-light: #fff2c5;
   --color-react-light: #ebf1ff;
   --color-graphql-light: #ffdcf3;
+  --color-btn-hero-light: linear-gradient(30deg, #222 50%, transparent 50%);
+  --color-btn-contact-light: var(--color-primary-light);
+  --color-btn-top-light: #4d4d4e;
+  /* Rest  */
+  --border-radius: 40px;
+  --transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 
 *,
@@ -61,7 +69,6 @@ body {
   --color-headings: var(--color-headings-light);
   --color-primary: var(--color-primary-light);
   --color-secondary: var(--color-secondary-light);
-  --color-accent-light: var(--color-accent-light);
   --color-link: var(--color-link-light);
   --color-icon: var(--color-icon-light);
   --color-open: var(--color-open-light);
@@ -70,6 +77,9 @@ body {
   --color-javascript: var(--color-javascript-light);
   --color-react: var(--color-react-light);
   --color-graphql: var(--color-graphql-light);
+  --color-btn-hero: var(--color-btn-hero-light);
+  --color-btn-contact: var(--color-btn-contact-light);
+  --color-btn-top: var(--color-btn-top-light);
 }
 
 body.dark-theme {
@@ -80,7 +90,6 @@ body.dark-theme {
   --color-headings: var(--color-headings-dark);
   --color-primary: var(--color-primary-dark);
   --color-secondary: var(--color-secondary-dark);
-  --color-accent-dark: var(--color-accent-dark);
   --color-link: var(--color-link-dark);
   --color-icon: var(--color-icon-dark);
   --color-open: var(--color-open-dark);
@@ -89,6 +98,9 @@ body.dark-theme {
   --color-javascript: var(--color-javascript-dark);
   --color-react: var(--color-react-dark);
   --color-graphql: var(--color-graphql-dark);
+  --color-btn-hero: var(--color-btn-hero-dark);
+  --color-btn-contact: var(--color-btn-contact-dark);
+  --color-btn-top: var(--color-btn-top-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,7 +112,6 @@ body.dark-theme {
     --color-headings: var(--color-headings-dark);
     --color-primary: var(--color-primary-dark);
     --color-secondary: var(--color-secondary-dark);
-    --color-accent-dark: var(--color-accent-dark);
     --color-link: var(--color-link-dark);
     --color-icon: var(--color-icon-dark);
     --color-open: var(--color-open-dark);
@@ -109,6 +120,9 @@ body.dark-theme {
     --color-javascript: var(--color-javascript-dark);
     --color-react: var(--color-react-dark);
     --color-graphql: var(--color-graphql-dark);
+    --color-btn-hero: var(--color-btn-hero-dark);
+    --color-btn-contact: var(--color-btn-contact-dark);
+    --color-btn-top: var(--color-btn-top-dark);
   }
 
   body.light-theme {
@@ -119,7 +133,6 @@ body.dark-theme {
     --color-headings: var(--color-headings-light);
     --color-primary: var(--color-primary-light);
     --color-secondary: var(--color-secondary-light);
-    --color-accent-light: var(--color-accent-light);
     --color-link: var(--color-link-light);
     --color-icon: var(--color-icon-light);
     --color-open: var(--color-open-light);
@@ -128,6 +141,9 @@ body.dark-theme {
     --color-javascript: var(--color-javascript-light);
     --color-react: var(--color-react-light);
     --color-graphql: var(--color-graphql-light);
+    --color-btn-hero: var(--color-btn-hero-light);
+    --color-btn-contact: var(--color-btn-contact-light);
+    --color-btn-top: var(--color-btn-top-light);
   }
 }
 
@@ -213,7 +229,7 @@ a {
   position: relative;
   bottom: 0.3rem;
   background-color: var(--color-link);
-  transition: width 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: var(--transition);
 }
 
 .link:hover:after {
@@ -304,3 +320,99 @@ a {
     padding: 0.7rem 1.5rem;
   }
 }
+
+/* Buttons */
+
+.btn {
+  white-space: nowrap;
+  text-align: center;
+  outline: 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: var(--border-radius);
+  background: transparent;
+}
+
+.btn--hero {
+  width: 18rem;
+  height: 6.7rem;
+  font-size: 2.2rem;
+  border: 2px solid var(--color-primary);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-image: var(--color-btn-hero);
+  -webkit-transition: all 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: all 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.btn--hero:hover {
+  background-position: 100%;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--contact {
+  width: 12rem;
+  height: 5.4rem;
+  opacity: 0.8;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: var(--color-btn-contact);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.btn--contact:hover {
+  opacity: 1;
+}
+
+.btn--top {
+  width: 5.5rem;
+  height: 5.5rem;
+  font-size: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--color-btn-top);
+  filter: drop-shadow(8.19149px 12.8723px 16.383px rgba(0, 0, 0, 0.1));
+}
+
+.btn--top .icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0;
+  vertical-align: middle;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.btn--top:hover .icon {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn--top {
+    width: 11.5rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    display: inline;
+    border-radius: var(--border-radius);
+  }
+
+  .btn--top .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+/* Blocks */
+
+/* .container {
+  width: min(1200px, 100% - 2rem);
+  margin-inline: auto;
+} */
