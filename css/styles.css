@@ -8,7 +8,7 @@
   --color-headings-dark: #fff;
   --color-body-dark: #adafba;
   --color-primary-dark: #7f42ff;
-  --color-secondary-dark: linear-gradient(30deg, #7f28ff 2%, #bf3dff 98%);
+  --color-secondary-dark: linear-gradient(30deg, #bf3dff 2%, #7f28ff 98%);
   --color-link-dark: #b393d7;
   --color-icon-dark: #e5e5e5;
   --color-open-dark: #66ffa7;
@@ -19,12 +19,13 @@
   --color-graphql-dark: rgba(255, 220, 243, 0.1);
   --color-btn-hero-dark: linear-gradient(
     30deg,
-    #7f28ff 2%,
-    #bf3dff 48%,
+    #bf3dff 2%,
+    #7f28ff 48%,
     transparent 50%
   );
   --color-btn-contact-dark: #413f6f;
   --color-btn-top-dark: var(--color-primary-dark);
+  --color-link-group-dark: rgba(42, 46, 61, 0.85);
   /* Light Theme */
   --color-block-main-light: #faf8fd;
   --color-block-contact-light: #fff;
@@ -44,9 +45,10 @@
   --color-btn-hero-light: linear-gradient(30deg, #222 50%, transparent 50%);
   --color-btn-contact-light: var(--color-primary-light);
   --color-btn-top-light: #4d4d4e;
+  --color-link-group-light: rgba(255, 255, 255, 0.79);
   /* Rest  */
   --border-radius: 40px;
-  --transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  --transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 
 *,
@@ -80,6 +82,7 @@ body {
   --color-btn-hero: var(--color-btn-hero-light);
   --color-btn-contact: var(--color-btn-contact-light);
   --color-btn-top: var(--color-btn-top-light);
+  --color-link-group: var(--color-link-group-light);
 }
 
 body.dark-theme {
@@ -101,6 +104,7 @@ body.dark-theme {
   --color-btn-hero: var(--color-btn-hero-dark);
   --color-btn-contact: var(--color-btn-contact-dark);
   --color-btn-top: var(--color-btn-top-dark);
+  --color-link-group: var(--color-link-group-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -123,6 +127,7 @@ body.dark-theme {
     --color-btn-hero: var(--color-btn-hero-dark);
     --color-btn-contact: var(--color-btn-contact-dark);
     --color-btn-top: var(--color-btn-top-dark);
+    --color-link-group: var(--color-link-group-dark);
   }
 
   body.light-theme {
@@ -144,6 +149,7 @@ body.dark-theme {
     --color-btn-hero: var(--color-btn-hero-light);
     --color-btn-contact: var(--color-btn-contact-light);
     --color-btn-top: var(--color-btn-top-light);
+    --color-link-group: var(--color-link-group-light);
   }
 }
 
@@ -227,7 +233,6 @@ a {
   width: 0;
   height: 2px;
   position: relative;
-  bottom: 0.3rem;
   background-color: var(--color-link);
   transition: var(--transition);
 }
@@ -327,7 +332,7 @@ a {
   white-space: nowrap;
   text-align: center;
   outline: 0;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   display: inline-block;
   cursor: pointer;
@@ -346,21 +351,19 @@ a {
   background-repeat: no-repeat;
   background-position: 0%;
   background-image: var(--color-btn-hero);
-  -webkit-transition: all 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
-  transition: all 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .btn--hero:hover {
   background-position: 100%;
   color: var(--color-primary);
-  border-color: var(--color-primary);
 }
 
 .btn--contact {
   width: 12rem;
   height: 5.4rem;
   opacity: 0.8;
-  font-weight: 600;
   font-size: 1.5rem;
   background: var(--color-btn-contact);
   -webkit-transition: var(--transition);
@@ -408,6 +411,18 @@ a {
     width: 1.8rem;
     height: 1.8rem;
   }
+}
+
+/* Link Group */
+
+.link-group {
+  width: 44rem;
+  height: 8.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 36px;
+  background: var(--color-link-group);
 }
 
 /* Blocks */
