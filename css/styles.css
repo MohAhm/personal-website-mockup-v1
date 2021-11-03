@@ -425,6 +425,21 @@ a {
   background: var(--color-link-group);
 }
 
+/* Card Hero */
+
+.card-hero {
+  border-radius: 2.4rem;
+  box-shadow: 0 72px 54px rgba(25, 25, 46, 0.04);
+  overflow: hidden;
+
+  padding: 50px;
+}
+
+.card-hero__photo {
+  width: 152px;
+  height: 152px;
+}
+
 /* Blocks */
 
 /* .container {
