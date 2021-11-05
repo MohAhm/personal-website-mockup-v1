@@ -18,56 +18,45 @@
 
     <div>
       <br />
-      <div style="width: 100%; margin: 0 auto; padding: 20px">
-        <div class="card-hero-container">
-          <div class="card-hero">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="
-                  images/profile-photo.webp    1x,
-                  images/profile-photo@2x.webp 2x
-                "
-              />
-              <source
-                type="image/jpg"
-                srcset="
-                  images/profile-photo.jpg    1x,
-                  images/profile-photo@2x.jpg 2x
-                "
-              />
-              <img
-                class="card-hero__photo"
-                src="images/profile-photo.jpg"
-                alt="Mohamed Ali"
-              />
-            </picture>
-            <span class="badge badge--title">Frontend Developer</span>
-            <h2 class="card-hero__name">Mohamed Ali</h2>
-            <span class="card-hero__city">Dubai</span>
+      <div class="project">
+        <div class="project__image">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                images/web-app-dashboard.webp    1x,
+                images/web-app-dashboard@2x.webp 2x
+              "
+            />
+            <source
+              type="image/png"
+              srcset="
+                images/web-app-dashboard.png    1x,
+                images/web-app-dashboard@2x.png 2x
+              "
+            />
+            <img src="images/web-app-dashboard.png" alt="WebApp Dashboard" />
+          </picture>
+          <div class="link-group project__links">
+            <a href="#" class="link">
+              <svg class="icon icon--secondary">
+                <use xlink:href="images/sprite.svg#link"></use>
+              </svg>
+              See Live
+            </a>
+            <a href="#" class="link">
+              <svg class="icon icon--secondary">
+                <use xlink:href="images/sprite.svg#code"></use>
+              </svg>
+              Source Code
+            </a>
           </div>
-
-          <span class="icon-container icon-container--typescript">
-            <svg class="icon icon--skills">
-              <use xlink:href="images/sprite.svg#typescript"></use>
-            </svg>
-          </span>
-          <span class="icon-container icon-container--javascript">
-            <svg class="icon icon--skills">
-              <use xlink:href="images/sprite.svg#javascript"></use>
-            </svg>
-          </span>
-          <span class="icon-container icon-container--react">
-            <svg class="icon icon--skills">
-              <use xlink:href="images/sprite.svg#react"></use>
-            </svg>
-          </span>
-          <span class="icon-container icon-container--graphql">
-            <svg class="icon icon--skills">
-              <use xlink:href="images/sprite.svg#graphql"></use>
-            </svg>
-          </span>
         </div>
+        <h2 class="project__title">Project title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+          culpa totam ipsam placeat error nisi aliquam est autem eos ea.
+        </p>
       </div>
     </div>
 

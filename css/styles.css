@@ -27,6 +27,7 @@
   --color-btn-top-dark: var(--color-primary-dark);
   --color-link-group-dark: rgba(42, 46, 61, 0.85);
   --color-card-hero-dark: var(--color-block-footer-dark);
+  --color-border-image-dark: #292d3c;
   /* Light Theme */
   --color-block-main-light: #faf8fd;
   --color-block-contact-light: #fff;
@@ -48,6 +49,7 @@
   --color-btn-top-light: #4d4d4e;
   --color-link-group-light: rgba(255, 255, 255, 0.79);
   --color-card-hero-light: var(--color-block-contact-light);
+  --color-border-image-light: var(--color-block-contact-light);
   /* Rest  */
   --border-radius: 40px;
   --transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
@@ -86,6 +88,7 @@ body {
   --color-btn-top: var(--color-btn-top-light);
   --color-link-group: var(--color-link-group-light);
   --color-card-hero: var(--color-card-hero-light);
+  --color-border-image: var(--color-border-image-light);
 }
 
 body.dark-theme {
@@ -109,6 +112,7 @@ body.dark-theme {
   --color-btn-top: var(--color-btn-top-dark);
   --color-link-group: var(--color-link-group-dark);
   --color-card-hero: var(--color-card-hero-dark);
+  --color-border-image: var(--color-border-image-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -133,6 +137,7 @@ body.dark-theme {
     --color-btn-top: var(--color-btn-top-dark);
     --color-link-group: var(--color-link-group-dark);
     --color-card-hero: var(--color-card-hero-dark);
+    --color-border-image: var(--color-border-image-dark);
   }
 
   body.light-theme {
@@ -156,6 +161,7 @@ body.dark-theme {
     --color-btn-top: var(--color-btn-top-light);
     --color-link-group: var(--color-link-group-light);
     --color-card-hero: var(--color-card-hero-light);
+    --color-border-image: var(--color-border-image-light);
   }
 }
 
@@ -438,12 +444,15 @@ a {
 
 .link-group {
   width: 44rem;
+  max-width: 100%;
   height: 8.4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 36px;
   background: var(--color-link-group);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
 }
 
 /* Card Hero */
@@ -539,6 +548,29 @@ a {
   .card-hero__city {
     font-size: 2.5rem;
   }
+}
+
+/* Project */
+
+.project__image {
+  width: 820px;
+  max-width: 100%;
+  position: relative;
+}
+
+.project__image img {
+  border: 10px solid var(--color-border-image);
+  border-radius: 3rem;
+}
+
+.project__links {
+  position: absolute;
+  right: -15px;
+  bottom: -20px;
+}
+
+.project__title {
+  margin-top: 4rem;
 }
 
 /* Blocks */
