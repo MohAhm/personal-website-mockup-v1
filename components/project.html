@@ -1,31 +1,53 @@
 <div class="project">
-  <div class="project__image">
-    <picture>
-      <source
-        type="image/webp"
-        srcset="
-          images/web-app-dashboard.webp    1x,
-          images/web-app-dashboard@2x.webp 2x
-        "
-      />
-      <source
-        type="image/png"
-        srcset="
-          images/web-app-dashboard.png    1x,
-          images/web-app-dashboard@2x.png 2x
-        "
-      />
-      <img src="images/web-app-dashboard.png" alt="WebApp Dashboard" />
-    </picture>
+  <div class="project__wrapper">
+    <div class="project__image">
+      <a
+        href="#link"
+        class="link project__image-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Project Link"
+      >
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/web-app-dashboard.webp    1x,
+              images/web-app-dashboard@2x.webp 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              images/web-app-dashboard.png    1x,
+              images/web-app-dashboard@2x.png 2x
+            "
+          />
+          <img src="images/web-app-dashboard.png" alt="WebApp Dashboard" />
+        </picture>
+      </a>
+    </div>
     <div class="link-group project__links">
-      <a href="#" class="link">
-        <svg class="icon icon--secondary">
+      <a
+        href="#link"
+        class="link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Project Link"
+      >
+        <svg class="icon icon--project">
           <use xlink:href="images/sprite.svg#link"></use>
         </svg>
         See Live
       </a>
-      <a href="#" class="link">
-        <svg class="icon icon--secondary">
+      <a
+        href="#code"
+        class="link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Project Code"
+      >
+        <svg class="icon icon--project">
           <use xlink:href="images/sprite.svg#code"></use>
         </svg>
         Source Code
