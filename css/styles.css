@@ -38,8 +38,7 @@ body {
   line-height: 1.5;
   font-size: 1.8rem;
   color: var(--color--text);
-
-  background: var(--color--background); /* temp... */
+  background: var(--color--background);
 }
 
 h1,
@@ -368,6 +367,12 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .card-hero {
+    margin-left: 5rem;
+  }
+}
+
 /* Project */
 
 .project__wrapper {
@@ -415,13 +420,39 @@ a {
   margin-top: 4rem;
 }
 
+/* Grids */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Blocks */
 
-.hero {
+.block {
   padding: 0 2rem;
+  border: 2px solid tomato;
+}
+
+.block__heading {
+  margin-top: 0;
+  text-align: center;
+}
+
+.block--white {
+  background: var(--white);
 }
 
 .container {
-  width: min(1200px, 100% - 2rem); /* temp */
-  margin-inline: auto;
+  max-width: 1120px;
+  margin: 0 auto;
 }
+
+/* .hero {
+  padding: 0 2rem;
+} */
