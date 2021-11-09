@@ -272,7 +272,7 @@ a {
   margin-bottom: 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 425px) {
   .btn--top {
     width: 11.5rem;
     height: 4.5rem;
@@ -481,5 +481,40 @@ a {
 @media screen and (min-width: 425px) {
   .nav__social {
     display: revert;
+  }
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+}
+
+.footer__social .icon--social {
+  margin: 0 1.2rem;
+}
+
+.footer__copy-right {
+  margin-top: 2rem;
+  color: var(--color--headings);
+}
+
+@media screen and (min-width: 425px) {
+  .footer {
+    text-align: left;
+  }
+
+  .footer__social {
+    display: none;
+  }
+
+  .footer__copy-right {
+    margin: 0;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
