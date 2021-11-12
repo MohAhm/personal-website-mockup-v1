@@ -119,7 +119,6 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* flex-wrap: wrap; */
   border-radius: 36px;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(9px);
@@ -172,7 +171,7 @@ a {
   background: #ffdcf3;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 768px) {
   .icon--skills {
     width: 55px;
     height: 55px;
@@ -205,8 +204,10 @@ a {
 .btn {
   white-space: nowrap;
   text-align: center;
+  padding: 1.6rem 4.3rem;
   outline: 0;
-  font-weight: 600;
+  margin: 1rem 0;
+  font-weight: 500;
   cursor: pointer;
   color: var(--white);
   border: 0;
@@ -214,8 +215,7 @@ a {
 }
 
 .btn--hero {
-  width: 18rem;
-  height: 6.7rem;
+  display: inline-block;
   font-size: 2.2rem;
   border: 2px solid var(--color--primary);
   background-color: var(--white);
@@ -243,14 +243,13 @@ a {
 }
 
 .btn--small {
-  width: 12rem;
-  height: 5.4rem;
   font-size: 1.5rem;
 }
 
 .btn--top {
   width: 5.5rem;
   height: 5.5rem;
+  padding: 0;
   font-size: 0;
   overflow: hidden;
   border-radius: 50%;
@@ -285,91 +284,6 @@ a {
   .btn--top .icon {
     width: 1.8rem;
     height: 1.8rem;
-  }
-}
-
-/* Card Hero */
-
-.card-hero-container {
-  width: 447px;
-  max-width: 100%;
-  position: relative;
-}
-
-.card-hero-container > .icon-container {
-  position: absolute;
-}
-
-.card-hero-container > .icon-container--typescript {
-  top: -16px;
-  left: -32px;
-}
-
-.card-hero-container > .icon-container--javascript {
-  top: 3px;
-  right: -20px;
-}
-
-.card-hero-container > .icon-container--react {
-  bottom: 18px;
-  right: -32px;
-}
-
-.card-hero-container > .icon-container--graphql {
-  bottom: -33px;
-  left: 27px;
-}
-
-.card-hero {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 4.5rem 0;
-  box-shadow: 0 46px 35px rgba(25, 25, 46, 0.04);
-  border-radius: 2.4rem;
-  background: var(--color-card-hero);
-}
-
-.card-hero__photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  filter: drop-shadow(0 18px 36px rgba(0, 59, 108, 0.13));
-}
-
-.card-hero__city {
-  color: #859fb4;
-  font-size: 2.4rem;
-  font-weight: 500;
-  margin-top: 1rem;
-}
-
-@media screen and (min-width: 425px) {
-  .card-hero-container > .icon-container--typescript {
-    top: -24px;
-    left: -49px;
-  }
-
-  .card-hero-container > .icon-container--javascript {
-    top: 5px;
-    right: -31px;
-  }
-
-  .card-hero-container > .icon-container--react {
-    bottom: 35px;
-    right: -50px;
-  }
-
-  .card-hero-container > .icon-container--graphql {
-    bottom: -50px;
-    left: 41px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .card-hero {
-    margin-left: 5rem;
   }
 }
 
@@ -452,10 +366,6 @@ a {
   margin: 0 auto;
 }
 
-/* .hero {
-  padding: 0 2rem;
-} */
-
 /* Navigation Bar */
 
 .nav {
@@ -481,6 +391,107 @@ a {
 @media screen and (min-width: 425px) {
   .nav__social {
     display: revert;
+  }
+}
+
+/* Hero */
+
+.hero {
+  padding: 0 2rem;
+}
+
+.hero__content {
+  order: 1;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.hero__tagline {
+  letter-spacing: 1px;
+  margin: 2rem 0;
+}
+
+.hero__card-container {
+  width: 100%;
+  max-width: 447px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero__card-container > .icon-container {
+  position: absolute;
+}
+
+.hero__card-container > .icon-container--typescript {
+  top: -16px;
+  left: -32px;
+}
+
+.hero__card-container > .icon-container--javascript {
+  top: 3px;
+  right: -32px;
+}
+
+.hero__card-container > .icon-container--react {
+  bottom: 20px;
+  right: -32px;
+}
+
+.hero__card-container > .icon-container--graphql {
+  bottom: -32px;
+  left: 27px;
+}
+
+.hero__card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.35rem 0;
+  box-shadow: 0 46px 35px rgba(25, 25, 46, 0.04);
+  border-radius: 2.4rem;
+  background: var(--color-card-hero);
+}
+
+.hero__photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: drop-shadow(0 18px 36px rgba(0, 59, 108, 0.13));
+}
+
+.hero__city {
+  color: #859fb4;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    text-align: left;
+    order: 0;
+    margin-top: 0;
+    margin-right: 5rem;
+    align-self: center;
+  }
+
+  .hero__heading {
+    font-size: 4.2rem;
+  }
+
+  .hero__card-container > .icon-container--typescript {
+    left: -52.5px;
+  }
+
+  .hero__card-container > .icon-container--react {
+    top: 265px;
+    bottom: 0;
+  }
+
+  .hero__card-container > .icon-container--graphql {
+    top: 335px;
+    bottom: 0;
   }
 }
 

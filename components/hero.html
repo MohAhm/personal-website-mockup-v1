@@ -1,8 +1,64 @@
-<div>
-  <h1>👋 Hi, I’m Mohamed Ali</h1>
-  <p>
-    I'm a web developer based in Stockholm. keeping up with the latest
-    technology trends are both very important to me.
-  </p>
-</div>
-<div style="height: 100px; background: dodgerblue"></div>
+<section class="block container">
+  <div class="hero">
+    <div class="grid grid--1x2">
+      <header class="hero__content">
+        <h1 class="hero__heading">Hi, I’m Mohamed Ali</h1>
+        <p class="hero__tagline">
+          I'm a Front End Developer dedicated to learning and further developing
+          my knowledge in web technologies and coding languages. Proficient in
+          React, JavaScript, and TypeScript.
+        </p>
+        <a href="#" class="btn btn--hero">Resume</a>
+      </header>
+
+      <div class="hero__card-container">
+        <span class="icon-container icon-container--typescript">
+          <svg class="icon icon--skills">
+            <use xlink:href="images/sprite.svg#typescript"></use>
+          </svg>
+        </span>
+        <span class="icon-container icon-container--javascript">
+          <svg class="icon icon--skills">
+            <use xlink:href="images/sprite.svg#javascript"></use>
+          </svg>
+        </span>
+        <span class="icon-container icon-container--react">
+          <svg class="icon icon--skills">
+            <use xlink:href="images/sprite.svg#react"></use>
+          </svg>
+        </span>
+        <span class="icon-container icon-container--graphql">
+          <svg class="icon icon--skills">
+            <use xlink:href="images/sprite.svg#graphql"></use>
+          </svg>
+        </span>
+
+        <div class="hero__card">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                images/profile-photo.webp    1x,
+                images/profile-photo@2x.webp 2x
+              "
+            />
+            <source
+              type="image/jpg"
+              srcset="
+                images/profile-photo.jpg    1x,
+                images/profile-photo@2x.jpg 2x
+              "
+            />
+            <img
+              class="hero__photo"
+              src="images/profile-photo.jpg"
+              alt="Mohamed Ali"
+            />
+          </picture>
+          <span class="badge badge--title">Front End Developer</span>
+          <span class="hero__city">Dubai</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
