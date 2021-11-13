@@ -245,6 +245,7 @@ a {
 
 .btn--small {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .btn--top {
@@ -508,6 +509,32 @@ a {
 @media screen and (min-width: 768px) {
   .project {
     width: 80%;
+  }
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__text {
+  font-size: 2.8rem;
+  color: var(--color--headings);
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+  }
+
+  .contact__text {
+    margin-right: 4rem;
+    margin-bottom: 0;
   }
 }
 
