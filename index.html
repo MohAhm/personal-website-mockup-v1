@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mohamed Ali personal portfolio's website."
+    />
+    <meta property="og:title" content="Mohamed Ali - Front End Developer" />
+    <meta
+      property="og:description"
+      content="Mohamed Ali personal portfolio's website."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="http://mohamedali.dev" />
     <title>Mohamed Ali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div class="block container">
@@ -49,7 +62,7 @@
     <section class="block container">
       <div class="hero">
         <div class="grid grid--1x2">
-          <header class="hero__content">
+          <header class="hero__content" data-aos="zoom-in-up">
             <h1 class="hero__heading">Hi, I’m Mohamed Ali</h1>
             <p class="hero__tagline">
               I'm a Front End Developer dedicated to learning and further
@@ -59,7 +72,7 @@
             <a href="#" class="btn btn--hero">Resume</a>
           </header>
 
-          <div class="hero__card-container">
+          <div class="hero__card-container" data-aos="zoom-in">
             <span class="icon-container icon-container--typescript">
               <svg class="icon icon--skills">
                 <use xlink:href="images/sprite.svg#typescript"></use>
@@ -113,7 +126,7 @@
     <section class="block container">
       <h2 class="block__heading">Top Projects</h2>
       <div class="project">
-        <div class="project__wrapper">
+        <div class="project__wrapper" data-aos="zoom-in-up">
           <div class="project__image">
             <a
               href="https://react-udacity-would-you-rather.netlify.app"
@@ -171,20 +184,22 @@
             </a>
           </div>
         </div>
-        <h3 class="project__title">Would You Rather?</h3>
-        <p>
-          A web app that lets a user to play the “Would You Rather?” game. Users
-          are able to answer questions, see which questions they haven’t
-          answered, see how other people have voted, post questions, and see the
-          ranking of users on the leaderboard.
-        </p>
-        <p>
-          <span class="project__technology">Technologies used:</span> React,
-          Redux, React-Router and Bootstrap
-        </p>
+        <div class="project__text" data-aos="fade-up">
+          <h3 class="project__title">Would You Rather?</h3>
+          <p>
+            A web app that lets a user to play the “Would You Rather?” game.
+            Users are able to answer questions, see which questions they haven’t
+            answered, see how other people have voted, post questions, and see
+            the ranking of users on the leaderboard.
+          </p>
+          <p>
+            <span class="project__technology">Technologies used:</span> React,
+            Redux, React-Router and Bootstrap
+          </p>
+        </div>
       </div>
       <div class="project">
-        <div class="project__wrapper">
+        <div class="project__wrapper" data-aos="zoom-in-up">
           <div class="project__image">
             <a
               href="https://react-udacity-myreads.netlify.app/"
@@ -233,19 +248,21 @@
             </a>
           </div>
         </div>
-        <h3 class="project__title">MyReads</h3>
-        <p>
-          A bookshelf app that allows users to select and categorize books they
-          have read, are currently reading, or want to read. This project
-          emphasizes the use of React with a given API server.
-        </p>
-        <p>
-          <span class="project__technology">Technologies used:</span> React,
-          React-Router and PropTypes
-        </p>
+        <div class="project__text" data-aos="fade-up">
+          <h3 class="project__title">MyReads</h3>
+          <p>
+            A bookshelf app that allows users to select and categorize books
+            they have read, are currently reading, or want to read. This project
+            emphasizes the use of React with a given API server.
+          </p>
+          <p>
+            <span class="project__technology">Technologies used:</span> React,
+            React-Router and PropTypes
+          </p>
+        </div>
       </div>
       <div class="project">
-        <div class="project__wrapper">
+        <div class="project__wrapper" data-aos="zoom-in-up">
           <div class="project__image">
             <a
               href="https://mohahm.github.io/web_app_dashboard/"
@@ -303,18 +320,21 @@
             </a>
           </div>
         </div>
-        <h3 class="project__title">WebApp Dashboard</h3>
-        <p>
-          An interactive dashboard for a web application. The application
-          includes tables, charts, graphics and other user interface components.
-        </p>
-        <p>
-          <span class="project__technology">Technologies used:</span> CSS Grid
-          And Flexbox, Sass, JavaScript Local Storage
-        </p>
+        <div class="project__text" data-aos="fade-up">
+          <h3 class="project__title">WebApp Dashboard</h3>
+          <p>
+            An interactive dashboard for a web application. The application
+            includes tables, charts, graphics and other user interface
+            components.
+          </p>
+          <p>
+            <span class="project__technology">Technologies used:</span> CSS Grid
+            And Flexbox, Sass, JavaScript Local Storage
+          </p>
+        </div>
       </div>
     </section>
-    <section class="block block--white">
+    <div class="block block--white">
       <div class="container">
         <div class="contact">
           <p class="contact__text">Let’s Get in Touch!</p>
@@ -328,7 +348,7 @@
           </a>
         </div>
       </div>
-    </section>
+    </div>
     <footer class="block container footer">
       <div class="footer__social">
         <a
@@ -360,5 +380,10 @@
         </button>
       </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
